@@ -41,7 +41,7 @@
 
   <modules>
     <module>oscm-app</module>
-
+    <module>oscm-app-startup</module>
   </modules>
 
   <dependencyManagement>
@@ -83,6 +83,12 @@
         <version>1.1</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.oscm</groupId>
+        <artifactId>oscm-app</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
 
       <dependency>
         <groupId>org.apache.tomee</groupId>
@@ -108,6 +114,17 @@
         </exclusions>
       </dependency>
       <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.1.3</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.sourceforge.cssparser</groupId>
+        <artifactId>cssparser</artifactId>
+        <version>0.9.14</version>
+      </dependency>
+      <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>1.2.16</version>
@@ -123,6 +140,31 @@
         <artifactId>commons-codec</artifactId>
         <version>1.10</version>
         <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>18.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-core</artifactId>
+        <version>4.5.0.Final</version>
+      </dependency>
+      <dependency>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-a4j</artifactId>
+        <version>4.5.0.Final</version>
+      </dependency>
+      <dependency>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces</artifactId>
+        <version>4.5.0.Final</version>
+      </dependency>
+      <dependency>
+        <groupId>org.w3c.css</groupId>
+        <artifactId>sac</artifactId>
+        <version>1.3</version>
       </dependency>
 
       <dependency>
@@ -261,9 +303,9 @@
       </dependency>
 
       <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>9.4-1206-jdbc42</version>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>9.4-1206-jdbc42</version>
         <scope>provided</scope>
         <exclusions>
           <exclusion>
@@ -298,6 +340,19 @@
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>1.7.5</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.faces</artifactId>
+        <version>2.2.12</version>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
