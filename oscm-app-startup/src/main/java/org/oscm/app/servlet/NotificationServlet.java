@@ -23,7 +23,7 @@ import org.oscm.app.ui.SessionConstants;
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.oscm.app.i18n.Messages;
+import org.oscm.app.ui.i18n.Messages;
 import org.oscm.app.data.PasswordAuthentication;
 import org.oscm.app.exceptions.APPlatformException;
 import org.oscm.app.service.APPAuthenticationServiceBean;

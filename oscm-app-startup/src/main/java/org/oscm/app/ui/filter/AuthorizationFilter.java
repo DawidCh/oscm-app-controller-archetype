@@ -14,7 +14,6 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import javax.ejb.EJB;
-import javax.inject.Inject;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
