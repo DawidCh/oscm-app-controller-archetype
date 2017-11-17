@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/servicecatalog/oscm-app.svg?branch=master)](https://travis-ci.org/servicecatalog/oscm-app)
+[![artifacts](https://jitpack.io/v/servicecatalog/oscm-app.svg)](https://jitpack.io/#servicecatalog/oscm-app)
 [![linesOfCode](https://sonarcloud.io/api/badges/measure?key=org.oscm.app:app&metric=ncloc)](https://sonarcloud.io/dashboard/index/org.oscm.app:app)
 [![coverage](https://sonarcloud.io/api/badges/measure?key=org.oscm.app:app&metric=coverage)](https://sonarcloud.io/dashboard/index/org.oscm.app:app)
 [![bugs](https://sonarcloud.io/api/badges/measure?key=org.oscm.app:app&metric=bugs)](https://sonarcloud.io/dashboard/index/org.oscm.app:app)
