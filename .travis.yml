@@ -1,6 +1,6 @@
 addons:
   sonarcloud:
-    organization: servicecatalog/oscm-app
+    organization: servicecatalog
     token: $SONAR_TOKEN
   postgresql: "9.4"
 language: java
