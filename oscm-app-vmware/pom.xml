@@ -123,7 +123,7 @@
             </goals>
             <phase>initialize</phase>
             <configuration>
-              <file>../libraries/vmware/javalib/vim25.jar</file>
+              <file>../libraries/vmware/vim25.jar</file>
               <artifactId>vim</artifactId>
               <groupId>com.vmware</groupId>
               <version>2.5</version>
