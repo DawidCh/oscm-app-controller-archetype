@@ -6,7 +6,7 @@ jdk:
   - oraclejdk8
 env:
   - MVN_GOAL=test
-  - MVN_GOAL=integration-test
+#  - MVN_GOAL=integration-test
 before_install:
   - ./db_setup.sh
   - mvn initialize
