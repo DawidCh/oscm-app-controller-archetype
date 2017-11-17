@@ -3,6 +3,7 @@ addons:
     organization: servicecatalog
     token: $SONAR_TOKEN
   postgresql: "9.4"
+sudo: false
 language: java
 jdk:
   - oraclejdk8
