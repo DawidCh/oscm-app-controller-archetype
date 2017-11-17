@@ -1,5 +1,7 @@
 addons:
-  sonarqube: true
+  sonarcloud:
+    organization: servicecatalog/oscm-app
+    token: $SONAR_TOKEN
   postgresql: "9.4"
 language: java
 jdk:
@@ -16,6 +18,6 @@ script:
   - MAVEN_OPTS=-Dorg.slf4j.simpleLogger.defaultLogLevel=info mvn $MVN_GOAL -q -fae -Dmaven.javadoc.skip=true -DfailIfNoTests=false -B -P travis
   - mvn cobertura:cobertura
 after_success:
-  #- sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=CTMG -Dsonar.projectName=CTMG -Dsonar.projectVersion=17.0.1 -Dsonar.sources=$TRAVIS_BUILD_DIR -Dsonar.tests=$TRAVIS_BUILD_DIR -Dsonar.sourceEncoding=UTF-8 -Dsonar.inclusions=**/*.java -Dsonar.exclusions=**/javasrc-it/**,**/example-service/**/*,**/*devruntime/**/*,**/*tests*/**/*,**/oscm-portal-webtests/results/**/*,**/j2ep/**/*.java,**/apache-csv/**/*.java,**/*oscm-build*/**/*.java,**/javasrc-it/**/*.java,**/*unittests*/**/*.java,**/OperationParameterType.jav,**/AccountServiceClient.java -Dsonar.test.inclusions=**/*unittests*/**/*.java -Dsonar.jacoco.reportPath=$TRAVIS_BUILD_DIR/oscm-build/result/reports/merged_jacoco.exec -Dsonar.java.source=1.8 -Dsonar.java.binaries=$TRAVIS_BUILD_DIR/oscm-build/result/work -Dsonar.java.test.binaries=$TRAVIS_BUILD_DIR/oscm-build/result
+  - sonar-scanner
   - bash <(curl -s https://codecov.io/bash)
 
