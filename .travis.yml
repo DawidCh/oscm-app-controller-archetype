@@ -11,7 +11,7 @@ env:
 before_install:
   - sudo pip install --user codecov
   - ./db_setup.sh
-  - MAVEN_OPTS=-Dorg.slf4j.simpleLogger.defaultLogLevel=debug mvn initialize
+  - mvn initialize
 install:
   - MAVEN_OPTS=-Dorg.slf4j.simpleLogger.defaultLogLevel=info mvn install -q -DskipTests=true -Dmaven.javadoc.skip=true -B -P travis
 script:
