@@ -49,6 +49,12 @@
     <module>oscm-app-vmware</module>
     <module>oscm-app-vmware-service</module>
     <module>oscm-app-vmware-ui</module>
+    <module>oscm-app-sample-ear</module>
+    <module>oscm-app-sample-war</module>
+    <module>oscm-app-sample</module>
+    <module>oscm-app-iaas</module>
+    <module>oscm-app-aws-ear</module>
+    <module>oscm-app-aws</module>
   </modules>
 
   <dependencyManagement>
@@ -80,6 +86,7 @@
         <artifactId>oscm-app-common</artifactId>
         <version>1.2</version>
         <classifier>classes</classifier>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
@@ -142,6 +149,24 @@
         <type>ejb</type>
         <version>1.0-SNAPSHOT</version>
       </dependency>
+      <dependency>
+        <groupId>org.oscm.app</groupId>
+        <artifactId>oscm-app-sample</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>ejb</type>
+      </dependency>
+      <dependency>
+        <groupId>org.oscm.app</groupId>
+        <artifactId>oscm-app-sample-war</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>org.oscm.app</groupId>
+        <artifactId>oscm-app-aws</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>ejb</type>
+      </dependency>
 
 
       <dependency>
@@ -177,6 +202,36 @@
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
         <version>4.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient-cache</artifactId>
+        <version>4.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpmime</artifactId>
+        <version>4.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>fluent-hc</artifactId>
+        <version>4.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-java-sdk-ec2</artifactId>
+        <version>1.11.37</version>
+      </dependency>
+      <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-java-sdk-core</artifactId>
+        <version>1.11.37</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
@@ -257,6 +312,12 @@
             <artifactId>*</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>antlr4-runtime</artifactId>
+        <version>4.7</version>
       </dependency>
 
       <dependency>
@@ -443,6 +504,27 @@
         <groupId>com.vmware</groupId>
         <artifactId>vim</artifactId>
         <version>2.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.6.0</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.6.0-rc1</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.6.0-rc1</version>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
