@@ -75,7 +75,7 @@ public class TargetLocationBean extends UiBeanBase {
     private void initBean() {
         vcenter = settings.getTargetVCenter();
         for (VCenter vc : vcenter) {
-            SelectItem item = new SelectItem(Integer.valueOf(vc.tkey), vc.name);
+            SelectItem item = new SelectItem(vc.tkey, vc.name);
             vcenterList.add(item);
             if (vcenterList.size() == 1) {
                 selectedVCenter = vc;

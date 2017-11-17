@@ -192,14 +192,14 @@ public class PropertyImportTest {
                 .thenReturn(thirdResult);
 
         // finding one entry
-        Mockito.when(new Boolean(resultSet.next())).thenReturn(Boolean.TRUE)
+        Mockito.when(resultSet.next()).thenReturn(Boolean.TRUE)
                 .thenReturn(Boolean.FALSE);
-        Mockito.when(new Integer(resultSet.getInt(Matchers.anyInt())))
-                .thenReturn(new Integer(0));
-        Mockito.when(new Boolean(secondResult.next())).thenReturn(Boolean.TRUE)
+        Mockito.when(resultSet.getInt(Matchers.anyInt()))
+                .thenReturn(0);
+        Mockito.when(secondResult.next()).thenReturn(Boolean.TRUE)
                 .thenReturn(Boolean.FALSE);
-        Mockito.when(new Integer(secondResult.getInt(Matchers.anyInt())))
-                .thenReturn(new Integer(4));
+        Mockito.when(secondResult.getInt(Matchers.anyInt()))
+                .thenReturn(4);
 
         Mockito.doReturn("mm").when(thirdResult).getString(Matchers.anyInt());
 
@@ -262,14 +262,14 @@ public class PropertyImportTest {
         Mockito.when(selectConfigSettingsStatement.executeQuery())
                 .thenReturn(thirdResult);
         // finding one entry
-        Mockito.when(new Boolean(resultSet.next())).thenReturn(Boolean.TRUE)
+        Mockito.when(resultSet.next()).thenReturn(Boolean.TRUE)
                 .thenReturn(Boolean.FALSE);
-        Mockito.when(new Integer(resultSet.getInt(Matchers.anyInt())))
-                .thenReturn(new Integer(0));
-        Mockito.when(new Boolean(secondResult.next())).thenReturn(Boolean.TRUE)
+        Mockito.when(resultSet.getInt(Matchers.anyInt()))
+                .thenReturn(0);
+        Mockito.when(secondResult.next()).thenReturn(Boolean.TRUE)
                 .thenReturn(Boolean.FALSE);
-        Mockito.when(new Integer(secondResult.getInt(Matchers.anyInt())))
-                .thenReturn(new Integer(4));
+        Mockito.when(secondResult.getInt(Matchers.anyInt()))
+                .thenReturn(4);
         Mockito.doReturn("mm").when(thirdResult).getString(Matchers.anyInt());
 
         FileOutputStream fos = null;
@@ -429,7 +429,7 @@ public class PropertyImportTest {
         // when
         String result = importer.trimValue("  ");
         // then
-        assertEquals(Boolean.TRUE, Boolean.valueOf(result.isEmpty()));
+        assertEquals(Boolean.TRUE, result.isEmpty());
     }
 
     @Test

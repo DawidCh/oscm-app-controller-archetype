@@ -151,13 +151,13 @@ public class MockURLStreamHandler extends URLStreamHandler {
         URLConnection conn = null;
         Integer count = this.count.get(u.getFile()) != null
                 ? this.count.get(u.getFile()) : Integer.valueOf(0);
-        int newCount = count.intValue();
+        int newCount = count;
         if (newCount == 0) {
             newCount = 1;
         } else {
-            newCount = count.intValue() + 1;
+            newCount = count + 1;
         }
-        this.count.put(u.getFile(), Integer.valueOf(newCount));
+        this.count.put(u.getFile(), newCount);
         if (u.getProtocol().equals("https")) {
             if (newCount > 1) {
                 String newURL = "https://" + u.getHost() + u.getPath() + "/"
@@ -197,13 +197,13 @@ public class MockURLStreamHandler extends URLStreamHandler {
         URLConnection conn = null;
         Integer count = this.count.get(u.getFile()) != null
                 ? this.count.get(u.getFile()) : Integer.valueOf(0);
-        int newCount = count.intValue();
+        int newCount = count;
         if (newCount == 0) {
             newCount = 1;
         } else {
-            newCount = count.intValue() + 1;
+            newCount = count + 1;
         }
-        this.count.put(u.getFile(), Integer.valueOf(newCount));
+        this.count.put(u.getFile(), newCount);
         if (u.getProtocol().equals("https")) {
             if (newCount > 1) {
                 String newURL = "https://" + u.getHost() + u.getPath() + "/"

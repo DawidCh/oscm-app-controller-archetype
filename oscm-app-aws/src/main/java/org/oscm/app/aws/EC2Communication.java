@@ -344,8 +344,8 @@ public class EC2Communication {
         RunInstancesRequest runInstancesRequest = new RunInstancesRequest()
                 .withInstanceType(ph.getInstanceType())
                 .withImageId(image.getImageId())
-                .withMinCount(Integer.valueOf(1))
-                .withMaxCount(Integer.valueOf(1))
+                .withMinCount(1)
+                .withMaxCount(1)
                 .withKeyName(ph.getKeyPairName());
         InstanceNetworkInterfaceSpecification networkInterface = new InstanceNetworkInterfaceSpecification();
         String subnetId = null;
@@ -382,7 +382,7 @@ public class EC2Communication {
         if ((ph.getSubnet() != null && ph.getSubnet().trim().length() > 0)
                 || (ph.getPublicIp() != null && ph.getPublicIp().trim()
                         .length() > 0)) {
-            networkInterface.setDeviceIndex(Integer.valueOf(0));
+            networkInterface.setDeviceIndex(0);
             networkInterface.setSubnetId(subnetId);
             networkInterface.setDeleteOnTermination(Boolean.TRUE);
             runInstancesRequest.withNetworkInterfaces(networkInterface);
@@ -392,7 +392,7 @@ public class EC2Communication {
         // if disk size is defined change the disk size of the new instance
         if (ph.getDiskSize() != null) {
             Integer diskSize = Integer.parseInt(ph.getDiskSize().trim());
-            if (diskSize.intValue() >= 0) {
+            if (diskSize >= 0) {
                 List<BlockDeviceMapping> mappings = image
                         .getBlockDeviceMappings();
                 for (BlockDeviceMapping bdm : mappings) {
@@ -401,9 +401,8 @@ public class EC2Communication {
                     if (rootDeviceName != null
                             && rootDeviceName.equals(bdm.getDeviceName())) {
 
-                        if (diskSize.intValue() < ebs.getVolumeSize()
-                                .intValue()) {
-                            diskSize = ebs.getVolumeSize().intValue();
+                        if (diskSize < ebs.getVolumeSize()) {
+                            diskSize = ebs.getVolumeSize();
                         }
                         ebs.setVolumeSize(diskSize);
                         ebs.setEncrypted(null);

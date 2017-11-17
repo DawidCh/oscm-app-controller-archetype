@@ -42,14 +42,14 @@ public class ConfigurationSettingsValidatorTest {
     public void validateLong_MinValue() throws Exception {
         ConfigurationSettingsValidator.validate(
                 PlatformConfigurationKey.APP_TIMER_INTERVAL,
-                Long.valueOf(Long.MIN_VALUE));
+            Long.MIN_VALUE);
     }
 
     @Test
     public void validateLong_MaxValue() throws Exception {
         ConfigurationSettingsValidator.validate(
                 PlatformConfigurationKey.APP_TIMER_INTERVAL,
-                Long.valueOf(Long.MAX_VALUE));
+            Long.MAX_VALUE);
     }
 
     @Test

@@ -353,7 +353,7 @@ public class APPConfigurationServiceBean {
             // APP_SUSPEND, no handle needed
         }
         if (!Strings.isEmpty(isSuspend)) {
-            return Boolean.valueOf(isSuspend).booleanValue();
+            return Boolean.valueOf(isSuspend);
         }
         return false;
     }

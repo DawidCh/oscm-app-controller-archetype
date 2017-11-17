@@ -548,7 +548,7 @@ public class VMPropertyHandler {
                 } catch (Exception e) {
                     throw new APPlatformException(Messages.getAll(
                             "error_read_static_network_config",
-                            new Object[] { Integer.valueOf(i), e.getMessage() })
+                            new Object[] {i, e.getMessage() })
                             .get(0).getText());
                 }
 
@@ -658,7 +658,7 @@ public class VMPropertyHandler {
             String value = getServiceSetting(diskPrefix);
             if (value != null && value.length() > 0) {
                 double diskSize = 1024.0 * Long.parseLong(value);
-                ddlist.add(Double.valueOf(diskSize));
+                ddlist.add(diskSize);
             } else {
                 break;
             }
@@ -981,9 +981,9 @@ public class VMPropertyHandler {
 
         Integer progress = info.getProgress();
         if (state == TaskInfoState.SUCCESS) {
-            progress = Integer.valueOf(100);
+            progress = 100;
         } else if (progress == null) {
-            progress = Integer.valueOf(0);
+            progress = 0;
         }
 
         LocalizableMessage desc = info.getDescription();
@@ -1098,7 +1098,7 @@ public class VMPropertyHandler {
         Double[] ddisks = getDataDisksMB();
         for (Double ddisk : ddisks) {
             disksDisplay.append("/");
-            disksDisplay.append(formatMBasGB(ddisk.doubleValue()));
+            disksDisplay.append(formatMBasGB(ddisk));
         }
 
         return disksDisplay.toString();

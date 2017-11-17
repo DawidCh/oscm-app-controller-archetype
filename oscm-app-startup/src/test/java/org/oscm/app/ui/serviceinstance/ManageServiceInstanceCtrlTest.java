@@ -140,7 +140,7 @@ public class ManageServiceInstanceCtrlTest {
                 serviceInstance);
 
         // then
-        assertEquals(Boolean.FALSE, Boolean.valueOf(result));
+        assertEquals(Boolean.FALSE, result);
     }
 
     @Test
@@ -155,7 +155,7 @@ public class ManageServiceInstanceCtrlTest {
                 serviceInstance);
 
         // then
-        assertEquals(Boolean.TRUE, Boolean.valueOf(result));
+        assertEquals(Boolean.TRUE, result);
     }
 
     @Test
@@ -317,7 +317,7 @@ public class ManageServiceInstanceCtrlTest {
 
         // then
         assertEquals(OUTCOME_SUCCESS, result);
-        assertEquals(Boolean.TRUE, Boolean.valueOf(model.isInitialized()));
+        assertEquals(Boolean.TRUE, model.isInitialized());
     }
 
     @Test
@@ -348,7 +348,7 @@ public class ManageServiceInstanceCtrlTest {
 
         // then
         assertEquals(OUTCOME_SUCCESS, result);
-        assertEquals(Boolean.TRUE, Boolean.valueOf(model.isInitialized()));
+        assertEquals(Boolean.TRUE, model.isInitialized());
         verify(facesContext, times(2)).addMessage(anyString(),
                 any(FacesMessage.class));
     }

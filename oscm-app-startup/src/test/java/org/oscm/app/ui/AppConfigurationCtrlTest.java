@@ -189,7 +189,7 @@ public class AppConfigurationCtrlTest {
         verify(facesContext, times(1)).addMessage(anyString(),
                 any(FacesMessage.class));
         assertEquals(OUTCOME_SUCCESS, result);
-        assertEquals(Boolean.FALSE, Boolean.valueOf(model.isInitialized()));
+        assertEquals(Boolean.FALSE, model.isInitialized());
     }
 
     @Test
@@ -231,8 +231,8 @@ public class AppConfigurationCtrlTest {
 
         // then
         assertEquals("", result);
-        assertEquals(Boolean.FALSE, Boolean.valueOf(model.isDirty()));
-        assertEquals(Boolean.FALSE, Boolean.valueOf(model.isInitialized()));
+        assertEquals(Boolean.FALSE, model.isDirty());
+        assertEquals(Boolean.FALSE, model.isInitialized());
     }
 
     @Test
@@ -283,7 +283,7 @@ public class AppConfigurationCtrlTest {
 
         // then
         assertEquals(OUTCOME_SUCCESS, result);
-        assertEquals(Boolean.TRUE, Boolean.valueOf(model.isRestartRequired()));
+        assertEquals(Boolean.TRUE, model.isRestartRequired());
     }
 
     @Test
@@ -303,6 +303,6 @@ public class AppConfigurationCtrlTest {
 
         // then
         assertEquals(OUTCOME_SUCCESS, result);
-        assertEquals(Boolean.FALSE, Boolean.valueOf(model.isRestartRequired()));
+        assertEquals(Boolean.FALSE, model.isRestartRequired());
     }
 }

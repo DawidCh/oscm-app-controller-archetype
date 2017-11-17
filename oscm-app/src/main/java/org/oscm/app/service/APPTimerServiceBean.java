@@ -594,7 +594,7 @@ public class APPTimerServiceBean implements Cloneable {
             } catch (BadResultException bre) {
                 logger.warn(
                         "Failure during rollback of instance parameters for service instance '{}' with message '{}'",
-                        Long.valueOf(currentSI.getTkey()), bre.getMessage());
+                    currentSI.getTkey(), bre.getMessage());
                 sendInfoMail(true, currentSI,
                         instanceProvStatus.getErrorMailMessage(), cause);
             }
@@ -676,7 +676,7 @@ public class APPTimerServiceBean implements Cloneable {
                 if (instance == null) {
                     throw new BadResultException(String.format(
                             "Returned object of type InstanceInfo is null for service '%s'",
-                            Long.valueOf(serviceInstance.getTkey())));
+                        serviceInstance.getTkey()));
                 }
                 if (instance.getAccessInfo() != null) {
                     serviceInstance
@@ -782,7 +782,7 @@ public class APPTimerServiceBean implements Cloneable {
         } catch (BadResultException e) {
             logger.warn(
                     "Failure during processing for service instance '{}' with message '{}'",
-                    Long.valueOf(serviceInstance.getTkey()), e.getMessage());
+                serviceInstance.getTkey(), e.getMessage());
 
         } catch (Exception e) {
 
@@ -883,14 +883,14 @@ public class APPTimerServiceBean implements Cloneable {
         if (currentSI.isDeleted()) {
             logger.info(
                     "Processing of service instance '{}' failed with return code '{}' and description '{}'. OSCM subscription is already terminated.",
-                    new Object[] { Long.valueOf(currentSI.getTkey()),
-                            Long.valueOf(instanceResult.getRc()),
+                    new Object[] {currentSI.getTkey(),
+                        (long) instanceResult.getRc(),
                             instanceResult.getDesc() });
         } else {
             logger.info(
                     "Processing of service instance '{}' failed with return code '{}' and description '{}'. OSCM was informed on the abortion.",
-                    new Object[] { Long.valueOf(currentSI.getTkey()),
-                            Long.valueOf(instanceResult.getRc()),
+                    new Object[] {currentSI.getTkey(),
+                        (long) instanceResult.getRc(),
                             instanceResult.getDesc() });
         }
     }
@@ -943,11 +943,11 @@ public class APPTimerServiceBean implements Cloneable {
         if (currentSI.isDeleted()) {
             logger.info(
                     "The processing of service instance '{}' was completed, but OSCM subscription is already terminated.",
-                    Long.valueOf(currentSI.getTkey()));
+                currentSI.getTkey());
         } else {
             logger.info(
                     "The processing of service instance '{}' was completed and OSCM has been notified accordingly",
-                    Long.valueOf(currentSI.getTkey()));
+                currentSI.getTkey());
         }
 
     }
@@ -1041,7 +1041,7 @@ public class APPTimerServiceBean implements Cloneable {
         } catch (BadResultException bre) {
             logger.warn(
                     "Failure during handling of instance parameters for service instance '{}' with message '{}'",
-                    Long.valueOf(currentSI.getTkey()), bre.getMessage());
+                currentSI.getTkey(), bre.getMessage());
             throw getPlatformException(bre);
         }
 
@@ -1293,7 +1293,7 @@ public class APPTimerServiceBean implements Cloneable {
         } catch (BadResultException bre) {
             logger.warn(
                     "Failure during storing of instance parameters for service instance '{}' with message '{}'",
-                    Long.valueOf(si.getTkey()), bre.getMessage());
+                si.getTkey(), bre.getMessage());
         }
     }
 

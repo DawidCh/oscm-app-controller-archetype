@@ -131,7 +131,7 @@ public class OperationServiceBean {
             ServiceInstance instance, String transactionId) {
         if (isOperationFromQueue(operationKey)) {
             Operation operation = em.getReference(Operation.class,
-                    Long.valueOf(operationKey));
+                operationKey);
             operation.setForQueue(false);
             em.flush();
         } else {

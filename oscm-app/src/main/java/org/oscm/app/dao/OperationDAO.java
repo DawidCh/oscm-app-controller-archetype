@@ -60,7 +60,7 @@ public class OperationDAO {
 
     public void removeOperation(long operationKey) {
         Query query = em.createNamedQuery("Operation.removeForKey");
-        query.setParameter("key", Long.valueOf(operationKey));
+        query.setParameter("key", operationKey);
         query.executeUpdate();
     }
 

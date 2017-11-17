@@ -177,9 +177,7 @@ public class StateMachine {
         try {
             return System.currentTimeMillis()
                     - Long.valueOf(
-                            config.getServiceSetting(VMPropertyHandler.GUEST_READY_TIMEOUT_REF))
-                            .longValue() > Long.valueOf(timeoutInMs)
-                    .longValue();
+                config.getServiceSetting(VMPropertyHandler.GUEST_READY_TIMEOUT_REF)) > Long.valueOf(timeoutInMs);
         } catch (NumberFormatException e) {
             logger.warn("The action timeout '" + timeoutInMs
                     + " 'is not a number and therefore ignored.");

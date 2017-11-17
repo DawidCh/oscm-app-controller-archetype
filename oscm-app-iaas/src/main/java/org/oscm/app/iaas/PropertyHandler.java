@@ -825,7 +825,7 @@ public class PropertyHandler {
                                 Messages.DEFAULT_LOCALE,
                                 "error_invalid_firewallconfig_character",
                                 new Object[] {
-                                        Integer.valueOf(e.getStartIndex()),
+                                    e.getStartIndex(),
                                         policy });
 
                         throw new RuntimeException(message);
@@ -1154,9 +1154,9 @@ public class PropertyHandler {
         long waitTime = 0;
         try {
             waitTime = Long
-                    .valueOf(
-                            getValue(CONTROLLER_WAIT_TIME,
-                                    settings.getConfigSettings())).longValue();
+                .valueOf(
+                    getValue(CONTROLLER_WAIT_TIME,
+                        settings.getConfigSettings()));
         } catch (NumberFormatException e) {
         }
         return waitTime;

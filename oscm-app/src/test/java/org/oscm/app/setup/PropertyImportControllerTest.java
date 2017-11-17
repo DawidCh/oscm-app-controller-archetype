@@ -100,8 +100,8 @@ public class PropertyImportControllerTest {
         assertEquals(USER_PASSWORD, propImport.getUserPwd());
         assertEquals(PROPERTY_FILE, propImport.getPropertyFile());
         assertEquals(CONTROLLER_ID, propImport.getControllerId());
-        assertEquals(Boolean.valueOf(OVERWRITE_FLAG),
-                Boolean.valueOf(propImport.isOverwriteFlag()));
+        assertEquals(Boolean.TRUE,
+            propImport.isOverwriteFlag());
     }
 
     @Test

@@ -38,7 +38,7 @@ public class HostConfig {
     }
 
     public void setEnabled(boolean enabled) {
-        xmlConfig.setProperty("[@enabled]", Boolean.valueOf(enabled));
+        xmlConfig.setProperty("[@enabled]", enabled);
     }
 
     public StorageBalancerConfig getBalancer() {

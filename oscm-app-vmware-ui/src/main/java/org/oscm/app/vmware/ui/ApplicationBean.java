@@ -92,7 +92,7 @@ public class ApplicationBean implements Serializable {
             // To keep session alive, the interval value is 1 minute less than
             // session timeout.
             long intervalValue = (long) maxInactiveInterval * 1000 - 60000L;
-            interval = Long.valueOf(intervalValue);
+            interval = intervalValue;
         }
         return interval;
     }

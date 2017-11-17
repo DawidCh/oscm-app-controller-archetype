@@ -78,8 +78,8 @@ public class DiskManager {
                 if (vdDev.getKey() > maxDeviceKey) {
                     maxDeviceKey = vdDev.getKey();
                 }
-                if (vdDev.getUnitNumber().intValue() > maxUnitNumber) {
-                    maxUnitNumber = vdDev.getUnitNumber().intValue();
+                if (vdDev.getUnitNumber() > maxUnitNumber) {
+                    maxUnitNumber = vdDev.getUnitNumber();
                 }
             }
         }
@@ -156,7 +156,7 @@ public class DiskManager {
 
         vdDataDisk.setKey(deviceKey);
         vdDataDisk.setControllerKey(vdSystemDisk.getControllerKey());
-        vdDataDisk.setUnitNumber(new Integer(unitNumber));
+        vdDataDisk.setUnitNumber(unitNumber);
         vdDataDisk.setBacking(diskfileBacking);
         vdDataDisk.setCapacityInKB(newDiskSpace);
 

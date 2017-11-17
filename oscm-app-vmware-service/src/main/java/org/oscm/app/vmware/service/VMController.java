@@ -281,7 +281,7 @@ public class VMController implements APPlatformController {
             logger.debug("Validation error on memory size [" + memory + "MB]");
             throw new APPlatformException(
                     Messages.getAll("error_invalid_memory",
-                            new Object[] { Long.valueOf(memory) }));
+                            new Object[] {memory}));
         }
     }
 

@@ -31,7 +31,7 @@ public class CreateStackRequestTest {
         // given
 
         // when
-        new CreateStackRequest("x").put("x", new Integer(8));
+        new CreateStackRequest("x").put("x", 8);
     }
 
     @Test(expected = IllegalArgumentException.class)

@@ -152,7 +152,7 @@ public class ServiceInstanceServiceBean {
         }
 
         serviceInstance = em.getReference(ServiceInstance.class,
-                Long.valueOf(serviceInstance.getTkey()));
+            serviceInstance.getTkey());
 
         switch (operation) {
 

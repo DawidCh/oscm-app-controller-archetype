@@ -98,7 +98,7 @@ public abstract class ProvisioningValidator {
             if (startTimeStr.equals(TIMEOUT)) {
                 logger.warn("This request already timeout. This should not occur.");
                 throw new APPlatformException(Messages.getAll(
-                        "error_operation_timeout", Long.valueOf(readyTimeout)));
+                        "error_operation_timeout", readyTimeout));
             }
             try {
 
@@ -120,12 +120,12 @@ public abstract class ProvisioningValidator {
                             || ph.getState() == FlowState.STARTING) {
                         throw new APPlatformException(Messages.getAll(
                                 "error_starting_operation_timeout",
-                                Long.valueOf(readyTimeout)));
+                            readyTimeout));
                     } else if (ph.getState() == FlowState.STOP_REQUESTED
                             || ph.getState() == FlowState.STOPPING) {
                         throw new APPlatformException(Messages.getAll(
                                 "error_stopping_operation_timeout",
-                                Long.valueOf(readyTimeout)));
+                            readyTimeout));
                     }
                 }
             } catch (NumberFormatException ex) {

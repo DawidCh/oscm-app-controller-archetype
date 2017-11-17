@@ -84,7 +84,7 @@ public class TemplateFileDAO {
 
     public TemplateFile find(TemplateFile file) {
         TemplateFile dbFile = em.find(TemplateFile.class,
-                Long.valueOf(file.getTkey()));
+            file.getTkey());
         if (dbFile == null) {
             dbFile = getTemplateFileByUnique(file.getFileName(),
                     file.getControllerId());

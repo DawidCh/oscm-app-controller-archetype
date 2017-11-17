@@ -106,7 +106,7 @@ public class Template {
                 .getServiceUtil().getDynamicProperty(vmTpl, "config");
 
         double tplDiskSpace = VMwareValue.fromBytes(
-                templateDiskSpace.longValue()).getValue(Unit.MB);
+            templateDiskSpace).getValue(Unit.MB);
         if (paramHandler.getConfigDiskSpaceMB() != .0) {
             double requestedDiskSpace = paramHandler.getConfigDiskSpaceMB();
             List<VirtualDevice> devices = configSpec.getHardware().getDevice();
@@ -556,8 +556,8 @@ public class Template {
                     String hostThatLinksToThisStoarge = (String) serviceUtil
                             .getDynamicProperty(hostMor, "name");
                     if (host.equals(hostThatLinksToThisStoarge)
-                            && hm.getMountInfo().isAccessible().booleanValue()
-                            && hm.getMountInfo().isMounted().booleanValue()
+                            && hm.getMountInfo().isAccessible()
+                            && hm.getMountInfo().isMounted()
                             && !hm.getMountInfo().getAccessMode()
                                     .equals("readOnly")) {
 

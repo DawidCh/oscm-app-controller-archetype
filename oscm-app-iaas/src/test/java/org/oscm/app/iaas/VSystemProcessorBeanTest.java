@@ -203,7 +203,7 @@ public class VSystemProcessorBeanTest {
         boolean result = vSystemProcessor.isAdminAgentReachable();
 
         // then
-        assertEquals(Boolean.TRUE, Boolean.valueOf(result));
+        assertEquals(Boolean.TRUE, result);
     }
 
     @Test
@@ -2055,7 +2055,7 @@ public class VSystemProcessorBeanTest {
 
     private void prepareSlaveClusterSizeAndServerIds(int slaveClusterSize,
             int slaveServersPresent) throws Exception {
-        doReturn(Integer.valueOf(slaveClusterSize)).when(vSystemProcessor)
+        doReturn(slaveClusterSize).when(vSystemProcessor)
                 .getSlaveClusterSize(paramHandler);
         prepareServerIds(slaveServersPresent);
     }

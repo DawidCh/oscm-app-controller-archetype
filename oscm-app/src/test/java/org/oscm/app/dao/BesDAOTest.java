@@ -123,10 +123,10 @@ public class BesDAOTest {
         Map<String, Setting> settings = getSettingsForMode("SAML_SP");
 
         // when
-        Boolean actual = Boolean.valueOf(besDAO.isSsoMode(settings));
+        Boolean actual = besDAO.isSsoMode(settings);
 
         // then
-        assertEquals(Boolean.valueOf(true), actual);
+        assertEquals(Boolean.TRUE, actual);
     }
 
     @Test
@@ -135,10 +135,10 @@ public class BesDAOTest {
         Map<String, Setting> settings = getSettingsForMode("INTERNAL");
 
         // when
-        Boolean actual = Boolean.valueOf(besDAO.isSsoMode(settings));
+        Boolean actual = besDAO.isSsoMode(settings);
 
         // then
-        assertEquals(Boolean.valueOf(false), actual);
+        assertEquals(Boolean.FALSE, actual);
     }
 
     @Test

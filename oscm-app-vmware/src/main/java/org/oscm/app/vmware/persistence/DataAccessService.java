@@ -69,7 +69,7 @@ public class DataAccessService {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                Integer seqnum = new Integer(rs.getInt("nextval"));
+                Integer seqnum = rs.getInt("nextval");
                 seq = String.format("%0" + numDigits + "d", seqnum);
             }
         } catch (SQLException e) {

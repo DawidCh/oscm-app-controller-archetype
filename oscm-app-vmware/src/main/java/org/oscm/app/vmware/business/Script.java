@@ -192,7 +192,7 @@ public class Script {
                     guestFileAttributes, script.length(), true);
         } else {
             GuestPosixFileAttributes guestFileAttributes = new GuestPosixFileAttributes();
-            guestFileAttributes.setPermissions(Long.valueOf(500));
+            guestFileAttributes.setPermissions(500L);
             guestFileAttributes.setAccessTime(DatatypeFactory.newInstance()
                     .newXMLGregorianCalendar(new GregorianCalendar()));
             guestFileAttributes.setModificationTime(DatatypeFactory
@@ -446,7 +446,7 @@ public class Script {
 
         List<GuestProcessInfo> procInfo = null;
         List<Long> pidsList = new ArrayList<Long>();
-        pidsList.add(Long.valueOf(pid));
+        pidsList.add(pid);
         do {
             LOG.debug("Waiting for the process to finish running.");
             try {
@@ -468,7 +468,7 @@ public class Script {
             Thread.sleep(5 * 1000);
         } while (procInfo != null && procInfo.get(0).getEndTime() == null);
 
-        if (procInfo != null && procInfo.get(0).getExitCode().intValue() != 0) {
+        if (procInfo != null && procInfo.get(0).getExitCode() != 0) {
             LOG.error("Script return code: " + procInfo.get(0).getExitCode());
             FileTransferInformation fileTransferInformation = null;
             fileTransferInformation = vimPort.initiateFileTransferFromGuest(

@@ -74,10 +74,10 @@ public class ConfigurationSettingsValidator {
     }
 
     private static void validateLong(PlatformConfigurationKey key, String value) {
-        Long minValue = Long.valueOf(Long.MIN_VALUE);
-        Long maxValue = Long.valueOf(Long.MAX_VALUE);
+        Long minValue = Long.MIN_VALUE;
+        Long maxValue = Long.MAX_VALUE;
         long parsedLong = parse(key, value, minValue, maxValue);
-        if (!isInRange(parsedLong, minValue.longValue(), maxValue.longValue())) {
+        if (!isInRange(parsedLong, minValue, maxValue)) {
             throw new RuntimeException(
                     "The value for"
                             + key
@@ -87,8 +87,7 @@ public class ConfigurationSettingsValidator {
     }
 
     public static boolean isInRange(long value, Long minValue, Long maxValue) {
-        return !((minValue != null && value < minValue.longValue()) || (maxValue != null && value > maxValue
-                .longValue()));
+        return !((minValue != null && value < minValue) || (maxValue != null && value > maxValue));
     }
 
     private static long parse(PlatformConfigurationKey key, String value,

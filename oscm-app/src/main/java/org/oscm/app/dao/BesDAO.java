@@ -476,7 +476,7 @@ public class BesDAO {
         LOGGER.info(
                 "The processing of service instance '{}' failed with return code '{}' and description '{}', but OSCM doesn't recognize the subscription",
                 new Object[] { currentSI.getInstanceId(),
-                        Long.valueOf(instanceResult.getRc()),
+                    (long) instanceResult.getRc(),
                         instanceResult.getDesc() });
     }
 
@@ -492,7 +492,7 @@ public class BesDAO {
             LOGGER.info(
                     "The processing of service instance '{}' failed with return code '{}' and description '{}'. OSCM couldn't be informed because of the wrong subscription state '{}'",
                     new Object[] { currentSI.getInstanceId(),
-                            Long.valueOf(instanceResult.getRc()),
+                        (long) instanceResult.getRc(),
                             instanceResult.getDesc(),
                             se.getFaultInfo().getReason().toString() });
         }

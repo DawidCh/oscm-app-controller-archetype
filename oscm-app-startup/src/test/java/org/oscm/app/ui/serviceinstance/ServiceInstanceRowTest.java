@@ -51,7 +51,7 @@ public class ServiceInstanceRowTest {
 
         // then
         assertEquals(Boolean.TRUE,
-                Boolean.valueOf(serviceInstanceRow.isButtonDisabled()));
+            serviceInstanceRow.isButtonDisabled());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ServiceInstanceRowTest {
 
         // then
         assertEquals(Boolean.FALSE,
-                Boolean.valueOf(serviceInstanceRow.isButtonDisabled()));
+            serviceInstanceRow.isButtonDisabled());
 
     }
 

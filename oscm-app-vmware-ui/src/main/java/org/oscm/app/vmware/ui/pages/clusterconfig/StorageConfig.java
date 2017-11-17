@@ -36,7 +36,7 @@ public class StorageConfig {
     }
 
     public void setEnabled(boolean enabled) {
-        xmlConfig.setProperty("[@enabled]", Boolean.valueOf(enabled));
+        xmlConfig.setProperty("[@enabled]", enabled);
     }
 
     public String getLimit() {

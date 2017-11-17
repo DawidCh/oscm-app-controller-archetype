@@ -82,7 +82,7 @@ public class ServiceInstanceDAOTest {
         siDAO.markAsDeleted(instance);
         // given
         assertEquals(Boolean.TRUE,
-                Boolean.valueOf(instance.getSubscriptionId().contains("#")));
-        assertEquals(Boolean.FALSE, Boolean.valueOf(instance.isLocked()));
+            instance.getSubscriptionId().contains("#"));
+        assertEquals(Boolean.FALSE, instance.isLocked());
     }
 }

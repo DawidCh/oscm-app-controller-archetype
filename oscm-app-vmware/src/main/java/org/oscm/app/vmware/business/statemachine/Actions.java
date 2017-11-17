@@ -451,9 +451,9 @@ public class Actions {
         TaskInfoState state = info.getState();
         Integer progress = info.getProgress();
         if (state == TaskInfoState.SUCCESS) {
-            progress = Integer.valueOf(100);
+            progress = 100;
         } else if (progress == null) {
-            progress = Integer.valueOf(0);
+            progress = 0;
         }
         LocalizableMessage desc = info.getDescription();
         String description = desc != null ? desc.getMessage() : "";

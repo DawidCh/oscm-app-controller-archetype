@@ -249,8 +249,8 @@ public class VM extends Template {
         VirtualMachineConfigSpec vmConfigSpec = new VirtualMachineConfigSpec();
 
         vmConfigSpec
-                .setMemoryMB(Long.valueOf(paramHandler.getConfigMemoryMB()));
-        vmConfigSpec.setNumCPUs(Integer.valueOf(paramHandler.getConfigCPUs()));
+                .setMemoryMB(paramHandler.getConfigMemoryMB());
+        vmConfigSpec.setNumCPUs(paramHandler.getConfigCPUs());
 
         String reqUser = paramHandler
                 .getServiceSetting(VMPropertyHandler.REQUESTING_USER);
