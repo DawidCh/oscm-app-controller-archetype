@@ -44,6 +44,7 @@
               <groupId>com.github.servicecatalog.oscm-commons</groupId>
               <artifactId>oscm-app-common</artifactId>
               <bundleDir>/</bundleDir>
+              <contextRoot>/oscm-app-openstack</contextRoot>
             </webModule>
           </modules>
         </configuration>

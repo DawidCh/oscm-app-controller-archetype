@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright FUJITSU LIMITED 2017-->
- 
-<web-app id="ADMUM_AppUI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
- xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
- version="3.1">
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-app_3_1.xsd"
+         id="ADMUM_AppUI" version="3.1">
 
  <display-name>APP Core User Interface</display-name>
 
@@ -12,7 +12,7 @@
   <param-value>.xhtml</param-value>
  </context-param>
  <context-param>
-  <param-name>facelets.REFRESH_PERIOD</param-name>
+  <param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
   <param-value>2</param-value>
  </context-param>
  <context-param>
@@ -42,7 +42,7 @@
    <param-value>/WEB-INF/facelets/tags/taglib.xml</param-value>
  </context-param>
  <context-param>
-  <param-name>facelets.SKIP_COMMENTS</param-name>
+  <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
   <param-value>true</param-value>
  </context-param>
  <!-- The following parameters are set to reduce memory consumption. These parameters might affect browser navigation. This 
@@ -106,16 +106,16 @@
  <ejb-local-ref>
   <ejb-ref-name>ejb/APPConfigurationService</ejb-ref-name>
   <ejb-ref-type>Session</ejb-ref-type>
-  <local>org.oscm.app.v2_0.service.APPConfigurationServiceBean</local>
+  <local>org.oscm.app.service.APPConfigurationServiceBean</local>
  </ejb-local-ref>
   <ejb-local-ref>
   <ejb-ref-name>ejb/ServiceInstanceService</ejb-ref-name>
   <ejb-ref-type>Session</ejb-ref-type>
-  <local>org.oscm.app.v2_0.service.ServiceInstanceServiceBean</local>
+  <local>org.oscm.app.service.ServiceInstanceServiceBean</local>
  </ejb-local-ref>
  <ejb-local-ref>
   <ejb-ref-name>ejb/APPTimerService</ejb-ref-name>
   <ejb-ref-type>Session</ejb-ref-type>
-  <local>org.oscm.app.v2_0.service.APPTimerServiceBean</local>
+  <local>org.oscm.app.service.APPTimerServiceBean</local>
  </ejb-local-ref>
 </web-app>

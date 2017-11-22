@@ -43,6 +43,7 @@
               <groupId>org.oscm.app</groupId>
               <artifactId>oscm-app-startup</artifactId>
               <bundleDir>/</bundleDir>
+              <contextRoot>/oscm-app</contextRoot>
             </webModule>
           </modules>
         </configuration>

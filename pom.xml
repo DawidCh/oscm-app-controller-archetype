@@ -62,56 +62,60 @@
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
         <artifactId>oscm-common</artifactId>
-        <version>1.2</version>
+        <version>1.3</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
         <artifactId>oscm-webservices-client</artifactId>
-        <version>1.2</version>
+        <version>1.3</version>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
         <artifactId>oscm-app-common</artifactId>
-        <version>1.2</version>
+        <version>1.3</version>
         <type>test-jar</type>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
         <artifactId>oscm-app-common</artifactId>
-        <version>1.2</version>
+        <version>1.3</version>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
         <artifactId>oscm-app-common</artifactId>
-        <version>1.2</version>
+        <version>1.3</version>
         <classifier>classes</classifier>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-extsvc</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-app-extsvc</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-extsvc-provisioning</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-extsvc-operation</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-extsvc-internal</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
+        <scope>provided</scope>
       </dependency>
 
       <dependency>
@@ -336,24 +340,28 @@
         <groupId>org.hibernate.common</groupId>
         <artifactId>hibernate-commons-annotations</artifactId>
         <version>5.0.1.Final</version>
+        <!--<scope>provided</scope>-->
       </dependency>
 
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
         <version>5.0.9.Final</version>
+        <!--<scope>provided</scope>-->
       </dependency>
 
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>5.0.9.Final</version>
+        <!--<scope>provided</scope>-->
       </dependency>
 
       <dependency>
         <groupId>org.hibernate.javax.persistence</groupId>
         <artifactId>hibernate-jpa-2.1-api</artifactId>
         <version>1.0.0.Final</version>
+        <!--<scope>provided</scope>-->
       </dependency>
 
       <dependency>
@@ -481,6 +489,7 @@
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>1.7.5</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -631,41 +640,41 @@
 
     <plugins>
       <!--<plugin>-->
-        <!--<groupId>org.codehaus.mojo</groupId>-->
-        <!--<artifactId>build-helper-maven-plugin</artifactId>-->
-        <!--<version>1.5</version>-->
-        <!--<executions>-->
-          <!--<execution>-->
-            <!--<id>add-test-source</id>-->
-            <!--<phase>process-test-sources</phase>-->
-            <!--<goals>-->
-              <!--<goal>add-test-source</goal>-->
-            <!--</goals>-->
-            <!--<configuration>-->
-              <!--<sources>-->
-                <!--<source>src/it/java</source>-->
-              <!--</sources>-->
-            <!--</configuration>-->
-          <!--</execution>-->
-        <!--</executions>-->
+      <!--<groupId>org.codehaus.mojo</groupId>-->
+      <!--<artifactId>build-helper-maven-plugin</artifactId>-->
+      <!--<version>1.5</version>-->
+      <!--<executions>-->
+      <!--<execution>-->
+      <!--<id>add-test-source</id>-->
+      <!--<phase>process-test-sources</phase>-->
+      <!--<goals>-->
+      <!--<goal>add-test-source</goal>-->
+      <!--</goals>-->
+      <!--<configuration>-->
+      <!--<sources>-->
+      <!--<source>src/it/java</source>-->
+      <!--</sources>-->
+      <!--</configuration>-->
+      <!--</execution>-->
+      <!--</executions>-->
       <!--</plugin>-->
 
       <!--<plugin>-->
-        <!--<groupId>org.apache.maven.plugins</groupId>-->
-        <!--<artifactId>maven-failsafe-plugin</artifactId>-->
-        <!--<version>2.15</version>-->
-        <!--<executions>-->
-          <!--<execution>-->
-            <!--<id>integration-tests</id>-->
-            <!--<configuration>-->
-              <!--<failIfNoTests>false</failIfNoTests>-->
-            <!--</configuration>-->
-            <!--<phase>integration-test</phase>-->
-            <!--<goals>-->
-              <!--<goal>integration-test</goal>-->
-            <!--</goals>-->
-          <!--</execution>-->
-        <!--</executions>-->
+      <!--<groupId>org.apache.maven.plugins</groupId>-->
+      <!--<artifactId>maven-failsafe-plugin</artifactId>-->
+      <!--<version>2.15</version>-->
+      <!--<executions>-->
+      <!--<execution>-->
+      <!--<id>integration-tests</id>-->
+      <!--<configuration>-->
+      <!--<failIfNoTests>false</failIfNoTests>-->
+      <!--</configuration>-->
+      <!--<phase>integration-test</phase>-->
+      <!--<goals>-->
+      <!--<goal>integration-test</goal>-->
+      <!--</goals>-->
+      <!--</execution>-->
+      <!--</executions>-->
       <!--</plugin>-->
     </plugins>
   </build>
