@@ -64,6 +64,12 @@
         <artifactId>oscm-common</artifactId>
         <version>1.3</version>
         <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>*</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-commons</groupId>
@@ -94,12 +100,24 @@
         <artifactId>oscm-extsvc</artifactId>
         <version>1.2</version>
         <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>*</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
         <artifactId>oscm-app-extsvc</artifactId>
         <version>1.2</version>
         <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>*</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.github.servicecatalog.oscm-interfaces</groupId>

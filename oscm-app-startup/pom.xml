@@ -18,18 +18,15 @@
     <dependency>
       <groupId>com.github.servicecatalog.oscm-commons</groupId>
       <artifactId>oscm-common</artifactId>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>*</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
+      <artifactId>oscm-extsvc-provisioning</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
       <artifactId>oscm-extsvc</artifactId>
-      <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>*</groupId>
@@ -40,7 +37,6 @@
     <dependency>
       <groupId>com.github.servicecatalog.oscm-interfaces</groupId>
       <artifactId>oscm-app-extsvc</artifactId>
-      <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>*</groupId>

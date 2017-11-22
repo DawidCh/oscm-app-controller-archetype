@@ -27,7 +27,7 @@
   </dependencies>
 
   <build>
-    <finalName>oscm-app-openstack</finalName>
+    <finalName>oscm-app-aws</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-ear-plugin</artifactId>
