@@ -67,7 +67,11 @@
         <exclusions>
           <exclusion>
             <groupId>*</groupId>
-            <artifactId>*</artifactId>
+            <artifactId>oscm*</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
