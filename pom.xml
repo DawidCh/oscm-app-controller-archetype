@@ -49,9 +49,6 @@
     <module>oscm-app-vmware</module>
     <module>oscm-app-vmware-service</module>
     <module>oscm-app-vmware-ui</module>
-    <module>oscm-app-sample-ear</module>
-    <module>oscm-app-sample-war</module>
-    <module>oscm-app-sample</module>
     <module>oscm-app-iaas</module>
     <module>oscm-app-aws-ear</module>
     <module>oscm-app-aws</module>

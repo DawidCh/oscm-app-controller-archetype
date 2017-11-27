@@ -1,0 +1,35 @@
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+                      name="${artifactId}">
+  <id>oscm-app-controller-archetype</id>
+  <requiredProperties>
+    <requiredProperty key="oscm-common-version" defaultValue="LATEST"/>
+    <requiredProperty key="oscm-interfaces-version" defaultValue="LATEST"/>
+  </requiredProperties>
+  <modules>
+    <module id="${rootArtifactId}-ejb" dir="__rootArtifactId__-ejb" name="${rootArtifactId}-ejb">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-war" dir="__rootArtifactId__-war" name="${rootArtifactId}-war">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-ear" dir="__rootArtifactId__-ear" name="${rootArtifactId}-ear"/>
+  </modules>
+</archetype-descriptor>
